@@ -1,0 +1,24 @@
+{
+  "name": "play-with-paper",
+  "version": "1.0.0",
+  "description": "Playing with Paper.js :D",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfbadr/play-with-paper.git"
+  },
+  "author": "Mikey Badr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mfbadr/play-with-paper/issues"
+  },
+  "homepage": "https://github.com/mfbadr/play-with-paper#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "morgan": "^1.8.1",
+    "pug": "^2.0.0-beta11"
+  }
+}
