@@ -7,7 +7,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 app.use(morgan('dev'));
 
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 app.route('/')
   .get(function(req, res){
