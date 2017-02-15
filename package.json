@@ -19,13 +19,11 @@
   "dependencies": {
     "css-loader": "^0.26.1",
     "express": "^4.14.1",
-    "install": "^0.8.7",
     "morgan": "^1.8.1",
     "paper": "^0.10.2",
     "pug": "^2.0.0-beta11",
     "randomcolor": "^0.4.4",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack": "^2.2.1"
   }
 }
