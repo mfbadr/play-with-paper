@@ -1,9 +1,13 @@
 var path = require('path');
+var webpack = require('webpack');
 module.exports = {
-	entry: "./src/js/index.js",
+	entry: {
+		bundle:"./src/js/index.js",
+		vendor: ['paper']
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: "bundle.js"
+		filename: "[name].js"
 	},
 	module: {
 		loaders: [
@@ -14,4 +18,7 @@ module.exports = {
 			}
 	]
   },
+  plugins: [
+	  new webpack.optimize.CommonsChunkPlugin({name: "vendor", filename:"vendor.bundle.js" } )
+  ]
 };
