@@ -1,7 +1,16 @@
+html,
 body {
-  background-color: black;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
 }
 
-h2 {
-  color: white;
+canvas#canvas {
+    width: 100%;
+    height: 100%;
+}
+canvas[resize] {
+    width: 100%;
+    height: 100%;
 }

@@ -14,13 +14,10 @@ window.onload = function() {
 
 	var hues = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'monochrome'];
 
-	// for (var i = 0; i < hues.length; i++){
-		// var maxPoint = new Point(view.bounds.width, view.bounds.height);
-		// drawCircles(makeRandomPoint(), hues[i]);
-	// }
-
-	view.onClick = function(e){
-		drawCircles(e.point, hues.randomElement());
+	view.onMouseDrag = function(e){
+		var numberOfCircles = Math.floor(Math.random() * 10);
+		var radius = Math.floor(Math.random() * 3) + 3;
+		drawCircles(e.point, hues.randomElement(), numberOfCircles, radius);
 	}
 
 	function makeRandomPoint(){
@@ -30,17 +27,20 @@ window.onload = function() {
 		return newRandomPoint;
 	}
 
-	function drawCircles(point, hue){
-		for (var i = 0; i < 20; i++) {
+	function drawCircles(point, hue, numberOfCircles, radius){
+		for (var i = 0; i < numberOfCircles; i++) {
+			// point.y -= makeRandomPoint().y;
+			// point.x += makeRandomPoint().x;
+			// point.x -= Math.random()*i*3;
 			var circle = new Path.Circle(
 				{
 					center: point,
-					radius: 100 - (5*i),
-					fillColor: randomColor({hue: hue}),
-					strokeColor: 'white',
-					// shadowColor: randomColor({hue: hue}),
-					// shadowOffset: new Point(0,250),
-					// shadowBlur: 15,
+					radius: (numberOfCircles * radius) - (radius*i),
+					fillColor: randomColor({
+							hue: hue,
+
+						}),
+					strokeColor: randomColor({hue: hue, luminocity: 'dark'}),
 				}
 			)
 		}
