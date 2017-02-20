@@ -25,8 +25,16 @@ window.onload = function() {
 	var allRectangles = new Group();
 	var growingRectangles = new Group();
 	var allCircles = new Group();
-
 	var drawRectangles;
+
+
+	var text = new PointText(view.center);
+	text.content = 'hold me';
+	text.fillColor = randomColor({
+		hue: primaryHue,
+	});
+	text.fontSize = 32;
+
 
 	view.onMouseDrag = function(e){
 		drawCircles(e.point, primaryHue);
@@ -39,13 +47,14 @@ window.onload = function() {
 
 
 	view.onMouseDown = function(e){
-		rainLines(e, hues.randomElement());
+		text.remove();
+		rainLines(e);
 	}
 	view.onMouseUp = function(e){
 		clearInterval(drawRectangles);
 	}
 
-	function rainLines(event, hue){
+	function rainLines(event){
 
 		// if(allRectangles.children.length < 100){
 			drawRectangles = setInterval (function(){

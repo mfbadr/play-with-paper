@@ -4,7 +4,8 @@
   "description": "Playing with Paper.js :D",
   "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && node server/app.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,6 @@
     "randomcolor": "^0.4.4",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
-    "youtube-iframe": "^1.0.3",
+    "youtube-iframe": "^1.0.3"
   }
 }
