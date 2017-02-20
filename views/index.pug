@@ -1,15 +1,18 @@
 doctype html
 html.no-js(lang='')
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title paperjs
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    //- link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
-    //- link(href='./css/main.css', rel='stylesheet', type='text/css')
-    script(type="text/javascript" src='bundle.js')
-    //- script(type="text/javascript" src='vendor/paper/dist/paper-full.min.js')
-    //- script(type="text/paperscript" canvas="canvas" src='js/main.js')
-  body
-    canvas#canvas(style="height: 100%; width:100%" resize)
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		title paperjs
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		//- link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+		//- link(href='./css/main.css', rel='stylesheet', type='text/css')
+		//- script(type="text/javascript" src='vendor/paper/dist/paper-full.min.js')
+		//- script(type="text/paperscript" canvas="canvas" src='js/main.js')
+		script(type="text/javascript" src='bundle.js')
+	body
+		canvas#canvas(style="height: 100%; width:100%" resize)
+		#player
+		iframe(id="ytplayer" type="text/html" width="1" height="1" src="https://www.youtube.com/embed/hdmSovWFhig?autoplay=1&disablekb=1&enablejsapi=1&rel=0&showinfo=0" frameborder="0")
+		script(type="text/javascript" src='player.js')

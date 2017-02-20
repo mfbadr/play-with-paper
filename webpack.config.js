@@ -1,9 +1,12 @@
 var path = require('path');
 module.exports = {
-	entry: "./src/js/index.js",
+	entry: {
+		'bundle': "./src/js/index.js",
+		'player': "./src/js/player.js",
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: "bundle.js"
+		filename: "[name].js"
 	},
 	module: {
 		loaders: [
@@ -12,6 +15,6 @@ module.exports = {
 				loaders: ['style-loader', 'css-loader'],
 				include: __dirname + '/src'
 			}
-	]
+		]
   },
 };

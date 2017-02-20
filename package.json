@@ -24,6 +24,7 @@
     "pug": "^2.0.0-beta11",
     "randomcolor": "^0.4.4",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "youtube-iframe": "^1.0.3",
   }
 }
